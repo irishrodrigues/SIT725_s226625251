@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SIT725 Task 2.2P - Calculator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="card">
+    <h1>Express Calculator</h1>
+    <p class="sub">SIT725 Task 2.2P &middot; Irish Rodrigues</p>
+
+    <div class="inputs">
+      <input type="number" id="a" placeholder="First number" />
+      <input type="number" id="b" placeholder="Second number" />
+    </div>
+
+    <h3>Using GET requests</h3>
+    <div class="buttons">
+      <button onclick="getCalc('add')">Add +</button>
+      <button onclick="getCalc('subtract')">Subtract &minus;</button>
+      <button onclick="getCalc('multiply')">Multiply &times;</button>
+      <button onclick="getCalc('divide')">Divide &divide;</button>
+    </div>
+
+    <h3>Using a POST request</h3>
+    <div class="buttons">
+      <select id="op">
+        <option value="add">add</option>
+        <option value="subtract">subtract</option>
+        <option value="multiply">multiply</option>
+        <option value="divide">divide</option>
+      </select>
+      <button onclick="postCalc()">Send POST</button>
+    </div>
+
+    <div id="result" class="result">Result will appear here</div>
+    <pre id="raw"></pre>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
